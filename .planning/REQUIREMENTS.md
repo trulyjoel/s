@@ -30,8 +30,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Claude Code Integration
 
-- [ ] **CC-01**: Vulnerability-check is a Claude Code slash command (`/appsec:vulnerability-check` or equivalent)
-- [ ] **CC-02**: How-to-fix is a Claude Code slash command (`/appsec:how-to-fix` or equivalent)
+- [ ] **CC-01**: Vulnerability-check is a Claude Code slash command (`/appsec:check`)
+- [ ] **CC-02**: How-to-fix is a Claude Code slash command (`/appsec:fix`)
 - [ ] **CC-03**: Commands accept code via file path argument (`$ARGUMENTS`) and can read the file directly
 - [ ] **CC-04**: Commands are project-scoped (`.claude/commands/`) for team distribution via git
 
@@ -100,8 +100,8 @@ Deferred to future release.
 | CC-02 | Phase 2 | Pending |
 | CC-03 | Phase 1 | Pending |
 | CC-04 | Phase 3 | Pending |
-| COP-01 | Phase 3 | Pending |
-| COP-02 | Phase 3 | Pending |
+| COP-01 | Phase 4 | Pending |
+| COP-02 | Phase 4 | Pending |
 | COP-03 | Phase 4 | Pending |
 | COP-04 | Phase 4 | Pending |
 | DIST-01 | Phase 3 | Pending |
@@ -115,4 +115,4 @@ Deferred to future release.
 
 ---
 *Requirements defined: 2026-03-18*
-*Last updated: 2026-03-18 after initial definition*
+*Last updated: 2026-03-18 after roadmap creation*
