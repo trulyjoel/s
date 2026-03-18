@@ -22,7 +22,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 ### Phase 1: Check Skill + Prompt Foundation
 **Goal**: Developers can run a fast, accurate vulnerability check on Java or JavaScript/TypeScript code and get a concise, actionable finding in under 5 seconds
 **Depends on**: Nothing (first phase)
-**Requirements**: VULN-01, VULN-02, VULN-03, VULN-04, VULN-05, PERF-01, PERF-02, PERF-03, CC-01, CC-03, DIST-03
+**Requirements**: VULN-01, VULN-03, VULN-04, VULN-05, PERF-01, PERF-02, PERF-03, CC-01, CC-03, DIST-03
 **Success Criteria** (what must be TRUE):
   1. Developer runs `/appsec:check path/to/file.java` and receives a finding that names the specific variable or function at risk — not generic OWASP text
   2. Each finding includes an OWASP category, severity, and a one-sentence explanation of why this specific code instance is dangerous
@@ -37,7 +37,7 @@ Plans:
 ### Phase 2: Fix Skill + Full Language Coverage
 **Goal**: Developers can request a working fix for any finding and receive language-specific, copy-paste-ready corrected code; detection covers all five target languages
 **Depends on**: Phase 1
-**Requirements**: REMED-01, REMED-02, REMED-03, REMED-04, CC-02
+**Requirements**: VULN-02, REMED-01, REMED-02, REMED-03, REMED-04, CC-02
 **Success Criteria** (what must be TRUE):
   1. Developer runs `/appsec:fix 1` (or finding description) and receives a fixed code snippet specific to the language and library shown — not generic pseudocode
   2. The fix skill reads from conversation context — no need to re-paste the original code

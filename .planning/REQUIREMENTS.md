@@ -85,7 +85,7 @@ Deferred to future release.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | VULN-01 | Phase 1 | Pending |
-| VULN-02 | Phase 1 | Pending |
+| VULN-02 | Phase 2 | Pending |
 | VULN-03 | Phase 1 | Pending |
 | VULN-04 | Phase 1 | Pending |
 | VULN-05 | Phase 1 | Pending |
