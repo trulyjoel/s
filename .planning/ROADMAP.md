@@ -29,7 +29,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. A known-safe pattern (PreparedStatement, parameterized query) is not flagged — the skill does not produce false positives on canonical safe APIs
   4. The full response arrives in under 5 seconds and can be read and acted on in under 15 seconds
   5. A written OWASP coverage map exists stating exactly which categories are covered vs not covered — no false advertising
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 01-01-PLAN.md — Build /appsec:check slash command with SQLi patterns and test fixtures
+- [ ] 01-02-PLAN.md — Create OWASP coverage map and validate command end-to-end
 
 ### Phase 2: Fix Skill + Full Language Coverage
 **Goal**: Developers can request a working fix for any finding and receive language-specific, copy-paste-ready corrected code; detection covers all five target languages
@@ -69,7 +72,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Check Skill + Prompt Foundation | 0/TBD | Not started | - |
+| 1. Check Skill + Prompt Foundation | 0/2 | Planning complete | - |
 | 2. Fix Skill + Full Language Coverage | 0/TBD | Not started | - |
 | 3. Distribution and Team Standard | 0/TBD | Not started | - |
 | 4. GitHub Copilot Extension | 0/TBD | Not started | - |
