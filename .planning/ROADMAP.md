@@ -72,7 +72,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Check Skill + Prompt Foundation | 0/2 | Planning complete | - |
+| 1. Check Skill + Prompt Foundation | 1/2 | In Progress|  |
 | 2. Fix Skill + Full Language Coverage | 0/TBD | Not started | - |
 | 3. Distribution and Team Standard | 0/TBD | Not started | - |
 | 4. GitHub Copilot Extension | 0/TBD | Not started | - |

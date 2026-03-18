@@ -9,11 +9,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Vulnerability Detection
 
-- [ ] **VULN-01**: Skill detects injection vulnerabilities (OWASP A03) in Java and JavaScript/TypeScript code with context-specific explanation of why the specific code is dangerous
+- [x] **VULN-01**: Skill detects injection vulnerabilities (OWASP A03) in Java and JavaScript/TypeScript code with context-specific explanation of why the specific code is dangerous
 - [ ] **VULN-02**: Skill detects cryptographic failures (OWASP A02) in Java and JavaScript/TypeScript — weak ciphers, hardcoded keys, insecure random, HTTP vs HTTPS
-- [ ] **VULN-03**: Each finding is mapped to its OWASP category with severity rating
-- [ ] **VULN-04**: Findings name the specific variable, function, or code path at risk (not generic OWASP descriptions)
-- [ ] **VULN-05**: False positive rate is acceptable — safe/valid patterns are not flagged (taint-analysis framing, not string matching)
+- [x] **VULN-03**: Each finding is mapped to its OWASP category with severity rating
+- [x] **VULN-04**: Findings name the specific variable, function, or code path at risk (not generic OWASP descriptions)
+- [x] **VULN-05**: False positive rate is acceptable — safe/valid patterns are not flagged (taint-analysis framing, not string matching)
 
 ### Remediation
 
@@ -24,15 +24,15 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Performance & Output
 
-- [ ] **PERF-01**: Vulnerability-check skill completes in <5 seconds for a typical function/code block
-- [ ] **PERF-02**: Output is concise — finding is ≤3 sentences; full response is scannable in <15 seconds
-- [ ] **PERF-03**: Output format is consistent: severity → OWASP category tag → one-sentence finding → code location
+- [x] **PERF-01**: Vulnerability-check skill completes in <5 seconds for a typical function/code block
+- [x] **PERF-02**: Output is concise — finding is ≤3 sentences; full response is scannable in <15 seconds
+- [x] **PERF-03**: Output format is consistent: severity → OWASP category tag → one-sentence finding → code location
 
 ### Claude Code Integration
 
-- [ ] **CC-01**: Vulnerability-check is a Claude Code slash command (`/appsec:check`)
+- [x] **CC-01**: Vulnerability-check is a Claude Code slash command (`/appsec:check`)
 - [ ] **CC-02**: How-to-fix is a Claude Code slash command (`/appsec:fix`)
-- [ ] **CC-03**: Commands accept code via file path argument (`$ARGUMENTS`) and can read the file directly
+- [x] **CC-03**: Commands accept code via file path argument (`$ARGUMENTS`) and can read the file directly
 - [ ] **CC-04**: Commands are project-scoped (`.claude/commands/`) for team distribution via git
 
 ### GitHub Copilot Extension
@@ -84,21 +84,21 @@ Deferred to future release.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| VULN-01 | Phase 1 | Pending |
+| VULN-01 | Phase 1 | Complete |
 | VULN-02 | Phase 2 | Pending |
-| VULN-03 | Phase 1 | Pending |
-| VULN-04 | Phase 1 | Pending |
-| VULN-05 | Phase 1 | Pending |
+| VULN-03 | Phase 1 | Complete |
+| VULN-04 | Phase 1 | Complete |
+| VULN-05 | Phase 1 | Complete |
 | REMED-01 | Phase 2 | Pending |
 | REMED-02 | Phase 2 | Pending |
 | REMED-03 | Phase 2 | Pending |
 | REMED-04 | Phase 2 | Pending |
-| PERF-01 | Phase 1 | Pending |
-| PERF-02 | Phase 1 | Pending |
-| PERF-03 | Phase 1 | Pending |
-| CC-01 | Phase 1 | Pending |
+| PERF-01 | Phase 1 | Complete |
+| PERF-02 | Phase 1 | Complete |
+| PERF-03 | Phase 1 | Complete |
+| CC-01 | Phase 1 | Complete |
 | CC-02 | Phase 2 | Pending |
-| CC-03 | Phase 1 | Pending |
+| CC-03 | Phase 1 | Complete |
 | CC-04 | Phase 3 | Pending |
 | COP-01 | Phase 4 | Pending |
 | COP-02 | Phase 4 | Pending |
