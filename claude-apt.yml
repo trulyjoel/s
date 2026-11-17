@@ -1,0 +1,48 @@
+name: Claude Code APT package
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    env:
+      KEY_FINGERPRINT: 31DDDE24DDFAB679F42D7BD2BAA929FF1A7ECACE
+      KEYRING: /etc/apt/keyrings/claude-code.asc
+    steps:
+      - name: Add and verify signing key
+        run: |
+          set -euo pipefail
+          sudo install -d -m 0755 /etc/apt/keyrings
+          sudo curl -fsSL https://downloads.claude.ai/keys/claude-code.asc -o "$KEYRING"
+          actual=$(gpg --show-keys --with-colons "$KEYRING" | awk -F: '$1 == "fpr" { print $10 }')
+          if [ "$actual" != "$KEY_FINGERPRINT" ]; then
+            echo "::error::Signing key fingerprint mismatch: got '$actual'"
+            exit 1
+          fi
+
+      - name: Add repository
+        run: |
+          echo "deb [arch=amd64 signed-by=$KEYRING] https://downloads.claude.ai/claude-code/apt/latest latest main" \
+            | sudo tee /etc/apt/sources.list.d/claude-code.list
+          sudo apt-get update \
+            -o Dir::Etc::sourcelist=sources.list.d/claude-code.list \
+            -o Dir::Etc::sourceparts=- \
+            -o APT::Get::List-Cleanup=0
+
+      - name: Download package
+        id: deb
+        run: |
+          set -euo pipefail
+          apt-get download claude-code:amd64
+          file=$(ls claude-code_*_amd64.deb)
+          echo "file=$file" >> "$GITHUB_OUTPUT"
+          echo "version=$(dpkg-deb -f "$file" Version)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9  # v7.0.2
+        with:
+          name: claude-code_${{ steps.deb.outputs.version }}_amd64
+          path: ${{ steps.deb.outputs.file }}
+          if-no-files-found: error
